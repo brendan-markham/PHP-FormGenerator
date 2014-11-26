@@ -1,7 +1,6 @@
 <?php
 
-// Replace '__autoload' with the below if running PHP 5.3+.
-/*spl_autoload_register(function ($name)
+spl_autoload_register(function ($name)
 {
 	if (is_file($element_file = "elements/{$name}.php"))
 	{
@@ -11,9 +10,9 @@
 	{
 		include $validation_file;
 	}
-});*/
+});
 
-function __autoload($name)
+/*function __autoload($name)
 {
 	if (is_file($element_file = "elements/{$name}.php"))
 	{
@@ -23,7 +22,7 @@ function __autoload($name)
 	{
 		include $validation_file;
 	}
-}
+}*/
 
 /* ========================================================================== */
 
@@ -44,7 +43,7 @@ $fg	->row()
 // incredibly sexy to developers).
 		->control(new FormInput(array("name" => "first_name", "required"), new FormValidationRequired("We need at least one name to determine who you are")), "* First name")
 	->row()
-		->control(new FormInput(array("name" => "last_name")), "Last name")
+		->control(new FormInput(array("name" => "last_name"), new FormValidationRegex('/^[a-z]/i', "Last name must begin with a letter")), "Last name")
 	->row()
 		->control(new FormEmail(array("name" => "email"), array(new FormValidationRequired(), new FormValidationEmail())), "* Email", "A password will be sent to this address")
 		//->control(new FormEmail(array("name" => "email", "required")), "* Email", "A password will be sent to this address") //<* This line will do the exact same thing as the one above.
@@ -81,7 +80,7 @@ $fg	->row()
 		->control(new FormCheckbox(array("name" => "subscribe")), "Subscribe")
 
 // You can specify 'row' attributes for custom styling (e.g. the submit row).
-	->row("div", array("class" => "row submit"))
+	->row("div", array("class" => "form-group submit"))
 		->control(new FormSubmit(array("value" => "Go!")))
 ;
 

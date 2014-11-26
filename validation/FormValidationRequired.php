@@ -2,7 +2,7 @@
 
 class FormValidationRequired extends FormValidation
 {
-	protected $message = "Please enter something and try again";
+	protected $message = "Please enter something";
 
 
 	public function evaluate_subject($subject)

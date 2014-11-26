@@ -2,7 +2,7 @@
 
 class FormValidationNumeric extends FormValidation
 {
-	protected $message = "Please enter a number and try again";
+	protected $message = "Please enter a number";
 
 
 	public function evaluate_subject($subject)
