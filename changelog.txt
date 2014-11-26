@@ -1,0 +1,45 @@
+v0.1.9
+- FormLabel uses htmlspecialchars() for 'content' argument. This behaviour can be
+	overridden with a third argument 'html' set to true.
+
+v0.1.8:
+- Wrapper HTMLElement argument added to FormRow.
+
+v0.1.7:
+- Bug fixed in FormSelect when passing multi-dimensional options.
+- Multi-select options now remembered after form submission.
+- Form data no longer stored by reference.
+
+v0.1.6:
+- Improved handling of multi-dimensional input names.
+- All validation classes can now handle multiple values.
+- Tabindex offset can now be defined.
+ 
+v0.1.5:
+- Form id attribute can now be added to action attribute by default.
+- All validation classes now have customisable error messages.
+- 'show_errors' member added for suppressing form errors.
+- New numerical validation class added.
+ 
+v0.1.4:
+- Fix control double-up when calling __toString() method after generate()
+	method.
+- Calling generate() method now returns FormGenerator object. Use __toString() 
+	(e.g. echo FormGenerator) to output HTML.
+ 
+v0.1.3:
+- All elements updated to include tabbing for better code readability.
+- Tabindex is only added when not explicitly passed in FormField attributes
+	array.
+- Fixed missing 'field_basename' variable when fields are not nested.
+- Set 'submitted' member to public, setter method removed.
+- New set_data() member replaces data() member with array argument.
+- Optional HTMLElement argument allowed on row() method.
+- HTMLElement uses htmlspecialchars() on attribute values.
+ 
+v0.1.2:
+- Tabindex attribute is added automatically.
+- Field values are updated from data array without requiring form submission.
+ 
+v0.1.1:
+- An 'error' class is applied to fields that do not pass validation.

@@ -1,0 +1,233 @@
+/* =============================================================================
+   Resets
+   ========================================================================== */
+fieldset {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+legend {
+	border: 0;
+	white-space: normal;
+	*margin-left: -7px;
+	padding: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+textarea {
+	overflow: auto;
+	resize: vertical;
+}
+
+button,input,select,textarea {
+	font-family: Georgia;
+	font-size: 100%;
+	vertical-align: middle;
+	margin: 0;
+}
+
+button,input {
+	line-height: normal;
+}
+
+button,input[type="button"],input[type="reset"],input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+	*overflow: visible;
+}
+
+button[disabled],input[disabled] {
+	cursor: default;
+}
+
+input[type="checkbox"],input[type="radio"] {
+	*width: 13px;
+	*height: 13px;
+	box-sizing: border-box;
+	padding: 0;
+}
+
+button::-moz-focus-inner,input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+/* =============================================================================
+   Template
+   ========================================================================== */
+form {
+	width: 638px;
+	background: #FFF;
+	border: 1px solid #DDD;
+	font-size: 0.85em;
+	clear: left;
+	margin: 1em auto;
+	border: 1px solid #DDD;
+}
+
+form div.row {
+	border-bottom: 1px dotted #DDD;
+	clear: left;
+	overflow: auto;
+	padding: 10px 0;
+}
+
+form fieldset div.row {
+	border: none;
+}
+
+form fieldset div.row+div.row {
+	padding-top: 0;
+}
+
+form fieldset {
+	border: none;
+	border-bottom: 1px dotted #DDD;
+	overflow: auto;
+	position: relative;
+	padding: 0 0 0 32%;
+}
+
+form div.row label,form legend {
+	width: 30%;
+	font-weight: bold;
+	line-height: 1.5;
+	text-align: right;
+	clear: left;
+	float: left;
+	margin: 2px 2% 0 0;
+}
+
+form legend {
+	position: absolute;
+	border-bottom: 1px solid #DDD;
+	top: 12px;
+	left: 0;
+	margin-top: 0;
+}
+
+form fieldset div.row label {
+	font-weight: normal;
+	text-align: left;
+}
+
+form input.text,form input.email,form input.password,form textarea {
+	width: 60%;
+	padding: 1px 2px;
+}
+
+form textarea {
+	width: 60%;
+	min-width: 60%;
+	max-width: 60%;
+	height: 6em;
+	min-height: 6em;
+}
+
+form select {
+	padding: 0 2px;
+}
+
+form select[multiple] {
+	min-width: 30%;
+	padding: 2px;
+}
+
+form option {
+	padding: 0 2px;
+}
+
+form input.checkbox,form input.radio {
+	margin: 4px 4px 0 0;
+}
+
+form div.row.hidden {
+	display: none;
+}
+
+form div.row.submit {
+	border: none;
+	padding: 10px 0 9px 32%;
+}
+
+form div.row input.error {
+	color: #999;
+}
+
+form div.row input.error:focus {
+	color: #000;
+}
+
+form div.row span.help,
+form div.row span.error {
+	clear: left;
+	display: block;
+	transition: color 0.5s;
+	-moz-transition: color 0.5s;
+	-webkit-transition: color 0.5s;
+	-o-transition: color 0.5s;
+	padding: 0.6em 0 0 32%;
+}
+
+form span.help {
+	font-size: 0.9em;
+	color: #777;
+}
+
+form span.error {
+	font-weight: bold;
+	color: #900;
+}
+
+form div.row input.submit {
+	min-width: 60px;
+}
+
+/* =============================================================================
+   Effects
+   ========================================================================== */
+form div.row,form fieldset {
+	transition: background 0.4s;
+	-moz-transition: background 0.4s;
+	-webkit-transition: background 0.4s;
+	-o-transition: background 0.4s;
+	transition-timing-function: linear;
+	-moz-transition-timing-function: linear;
+	-webkit-transition-timing-function: linear;
+	-o-transition-timing-function: linear;
+}
+
+form div.row:hover,form fieldset:hover {
+	background: #F3F3F3;
+}
+
+form fieldset div.row:hover {
+	background: transparent;
+}
+
+form div.submit {
+	background: #FFF !important;
+}
+
+form div.row:hover>span.help {
+	color: #222;
+}
+
+form legend {
+	transition: border-bottom 0.4s;
+	-moz-transition: border-bottom 0.4s;
+	-webkit-transition: border-bottom 0.4s;
+	-o-transition: border-bottom 0.4s;
+	transition-timing-function: linear;
+	-moz-transition-timing-function: linear;
+	-webkit-transition-timing-function: linear;
+	-o-transition-timing-function: linear;
+}
+
+form fieldset:hover legend {
+	border-bottom: 5px solid #000;
+}
