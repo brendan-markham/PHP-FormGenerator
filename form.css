@@ -69,18 +69,18 @@ form {
 	border: 1px solid #DDD;
 }
 
-form div.row {
+form div.form-group {
 	border-bottom: 1px dotted #DDD;
 	clear: left;
 	overflow: auto;
 	padding: 10px 0;
 }
 
-form fieldset div.row {
+form fieldset div.form-group {
 	border: none;
 }
 
-form fieldset div.row+div.row {
+form fieldset div.form-group+div.form-group {
 	padding-top: 0;
 }
 
@@ -92,7 +92,7 @@ form fieldset {
 	padding: 0 0 0 32%;
 }
 
-form div.row label,form legend {
+form div.form-group label,form legend {
 	width: 30%;
 	font-weight: bold;
 	line-height: 1.5;
@@ -110,7 +110,7 @@ form legend {
 	margin-top: 0;
 }
 
-form fieldset div.row label {
+form fieldset div.form-group label {
 	font-weight: normal;
 	text-align: left;
 }
@@ -145,25 +145,25 @@ form input.checkbox,form input.radio {
 	margin: 4px 4px 0 0;
 }
 
-form div.row.hidden {
+form div.form-group.hidden {
 	display: none;
 }
 
-form div.row.submit {
+form div.form-group.submit {
 	border: none;
 	padding: 10px 0 9px 32%;
 }
 
-form div.row input.error {
+form div.form-group input.error {
 	color: #999;
 }
 
-form div.row input.error:focus {
+form div.form-group input.error:focus {
 	color: #000;
 }
 
-form div.row span.help,
-form div.row span.error {
+form div.form-group span.help,
+form div.form-group span.error {
 	clear: left;
 	display: block;
 	transition: color 0.5s;
@@ -183,14 +183,14 @@ form span.error {
 	color: #900;
 }
 
-form div.row input.submit {
+form div.form-group input.submit {
 	min-width: 60px;
 }
 
 /* =============================================================================
    Effects
    ========================================================================== */
-form div.row,form fieldset {
+form div.form-group,form fieldset {
 	transition: background 0.4s;
 	-moz-transition: background 0.4s;
 	-webkit-transition: background 0.4s;
@@ -201,11 +201,11 @@ form div.row,form fieldset {
 	-o-transition-timing-function: linear;
 }
 
-form div.row:hover,form fieldset:hover {
+form div.form-group:hover,form fieldset:hover {
 	background: #F3F3F3;
 }
 
-form fieldset div.row:hover {
+form fieldset div.form-group:hover {
 	background: transparent;
 }
 
@@ -213,7 +213,7 @@ form div.submit {
 	background: #FFF !important;
 }
 
-form div.row:hover>span.help {
+form div.form-group:hover>span.help {
 	color: #222;
 }
 
